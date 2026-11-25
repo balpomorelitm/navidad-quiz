@@ -4,7 +4,7 @@
 
 A classroom presentation with 42 questions: Geography (5), History (5), Literature (10), Cinema & TV (10), Christmas (12). The final three questions/options in every round are in Spanish. All 18 Spanish solutions have italic English answer and explanation translations, shown only in the correction round.
 
-Start with the Mingle Challenge (10 of 15 tasks, a different person each time, turron prize draw). Quiz questions come first, followed by sectioned answers, an English guide to Spain's New Year chimes, the local official 2025-2026 Antena 3 excerpt, a prize draw, Christmas greetings and a final Instagram QR slide. There are 107 slides. Sport and Food remain hidden until materials arrive.
+Start with the Mingle Challenge (10 of 15 tasks, a different person each time, turron prize draw). Quiz questions come first, followed by sectioned answers, the winning-team announcement, an English guide to Spain's New Year chimes, the local official 2025-2026 Antena 3 excerpt, a prize draw, Christmas greetings and a final Instagram QR slide. There are 108 slides. Sport and Food remain hidden until materials arrive.
 
 ## Presenting
 
@@ -14,12 +14,14 @@ Click **Open audience screen**, move that second window to the projector, and cl
 
 Use arrows, Page Up/Page Down, Enter/Space, or the panel buttons to advance. **Home** returns to the cover. Options appear A, B, C, D one second apart; the presenter can show all immediately. Options are static: no selections or scores are recorded.
 
-**Presentation sound** contains independent music/effects volume controls (12% and 45% defaults). The supplied welcome MP3 loops only on the cover and Mingle slides; music stops for the quiz. Seven supplied local MP3 files provide the welcome loop, section bells, alternating question effects, a special cue on entering Spanish questions, the quiz start and answer transitions. Sound pauses during video and plays only in the audience window when connected. Enable sound once with a real click; preferences are saved and synchronized.
+**Presentation sound** contains independent music/effects volume controls (12% and 45% defaults). The supplied welcome MP3 loops only on the cover and Mingle slides; music stops for the quiz. Eight supplied local MP3 files provide the welcome loop, section bells, alternating question effects, a special cue on entering Spanish questions, the quiz start, answer transitions and winning-team celebration. Sound pauses during video and plays only in the audience window when connected. Enable sound once with a real click; preferences are saved and synchronized.
+
+**Team winner** opens the announcement after the final answer key. Enter the winning team's name privately, then click **Announce winner**. Four seconds of suspense precede the large animated name, swinging background bells and celebration sound. The draft and pending name are not sent to the audience; only the revealed name is shared. Leaving during suspense cancels the announcement. Hide / reset conceals it; revisits and late audience connections do not replay the sound.
 
 **Prize draw** opens a silent six-second animation. Set the eligible card count, then click **Start draw**. The final ticket is chosen from 1 to N using unbiased cryptographic randomness in modern browsers and shared with the audience. Generated almond-turron pieces fall when the winner appears. Leaving during a draw cancels it; Reset prepares a new draw.
 
 The cover borrows the supplied poster's illustrated style with real Lobster lettering. The HKU logo appears only there. New chapters have a brief pop transition. Christmas keeps snow, lights and garlands; other rounds feature animated globes, books, pages and film reels. Reduced-motion settings are respected. The final QR links to [@spanishprogramme_hku](https://www.instagram.com/spanishprogramme_hku/), verified from the programme's official website.
 
-For local use, keep `index.html` and `media/` together. Photographs, styles, scripts and fonts are embedded. The three cropped film clips, seven MP3 files and 74.04-second campanadas excerpt work offline. Only YouTube carols require Internet. The local campanadas include the preamble, twelve chimes and New Year greeting; the old forced 70-second stop was removed. The official source link remains available.
+For local use, keep `index.html` and `media/` together. Photographs, styles, scripts and fonts are embedded. The three cropped film clips, eight MP3 files and 74.04-second campanadas excerpt work offline. Only YouTube carols require Internet. The local campanadas include the preamble, twelve chimes and New Year greeting; the old forced 70-second stop was removed. The official source link remains available.
 
 The organisers supplied 30 Word-document images and the original film clips. Additional portraits, book covers, answer-only cinema posters and the official university logo include source credits. Credits and research references are available after revealing answers. Third-party assets retain their respective rights.

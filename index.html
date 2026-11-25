@@ -619,6 +619,55 @@ body[data-view=audience] .masthead{justify-content:center}body[data-view=audienc
 body[data-view=audience] .presenter-only{display:none!important}.presenter-scaled .presenter-canvas .raffle-body{padding:30px 8% 5px}.presenter-scaled .presenter-canvas .raffle-body h1{font-size:58px}.presenter-scaled .presenter-canvas .raffle-number-shell{min-height:180px;width:390px}.presenter-scaled .presenter-canvas .raffle-status{margin-top:23px}.presenter-scaled .presenter-canvas .raffle-message{font-size:23px}.presenter-scaled .presenter-canvas .follow-body{padding:48px 9% 20px}.presenter-scaled .presenter-canvas .follow-copy h1{font-size:67px}.presenter-scaled .presenter-canvas .follow-copy>p:not(.eyebrow){font-size:25px}.presenter-scaled .presenter-canvas .social-qr{max-width:430px}
 @media(max-width:700px){.raffle-body h1{font-size:38px}.raffle-number-shell{width:255px;min-height:150px}.raffle-number{font-size:85px}.raffle-finished .raffle-number{font-size:110px}.raffle-status{font-size:13px;letter-spacing:1px}.raffle-message{font-size:20px}.raffle-eligibility{font-size:14px}.follow-body{display:flex;flex-direction:column;gap:25px}.follow-copy h1{font-size:44px}.follow-copy>p:not(.eyebrow){font-size:20px}.instagram-handle{font-size:23px!important}.social-qr{width:min(320px,95%)}.social-qr figcaption{font-size:17px}.turron-piece:nth-child(n+19){display:none}}
 @media(prefers-reduced-motion:reduce){.new-section-pop .slide-body,.raffle-running .raffle-number-shell,.raffle-finished .raffle-number-shell{animation:none!important}.section-pop-burst,.turron-snow{display:none!important}.raffle-running .raffle-number{filter:none}}
+
+/* The winning team has its own festive stage, with an uncluttered centre. */
+.team-winner-slide{--ink:#fff4cd;--muted:#e3d2a2;--line:#a98b4a;--red:#ffe5a3;--leaf:#f3d182;background:radial-gradient(ellipse at 50% 40%,#285b3d 0,#17482f 44%,#103522 100%);border-color:#b18c45;color:#fff4cd;box-shadow:0 14px 45px #001a1266}
+.team-winner-slide::before{inset:17px;border-color:#c5a15b70;border-radius:13px;z-index:0}
+.team-winner-slide::after{content:'';position:absolute;left:7%;right:7%;bottom:85px;height:68px;border-radius:50%;background:radial-gradient(ellipse,#e5ba5524,transparent 69%);pointer-events:none;z-index:0}
+.team-winner-body{align-items:center;justify-content:center;text-align:center;padding:43px 17% 20px;gap:0;isolation:isolate}
+.team-winner-body::before,.team-winner-body::after{content:'';position:absolute;top:0;bottom:0;width:72px;pointer-events:none;z-index:-1;background:repeating-linear-gradient(90deg,#601b27 0,#a42c39 21px,#7c2430 43px,#4b1421 65px);border-bottom:3px solid #d2ac58;border-radius:0 0 70% 0;box-shadow:12px 0 23px #001d1838;opacity:.8}
+.team-winner-body::before{left:0;transform:skew(-5deg);transform-origin:top left}
+.team-winner-body::after{right:0;transform:scaleX(-1) skew(-5deg);transform-origin:center}
+.team-winner-kicker{color:#f3d182;font-size:17px!important;font-weight:700;letter-spacing:4px;line-height:1.4;margin:0 0 20px;text-transform:uppercase}
+.team-winner-body h1{font-size:48px;line-height:1.16;color:#fff1c8;letter-spacing:-.5px;max-width:100%;margin:0}
+.team-winner-name{position:relative;display:block;font:600 var(--team-name-size,82px)/1.13 var(--display);letter-spacing:-1px;color:#ffdf8d;text-shadow:0 3px 0 #ac7433,0 9px 24px #001c1b99;margin:33px 0 26px;padding:0 7px 25px;max-width:100%;width:100%;overflow-wrap:anywhere;text-wrap:balance}
+.team-winner-name::before,.team-winner-name::after{content:'';position:absolute;height:2px;left:18%;right:18%;bottom:8px;background:linear-gradient(90deg,transparent,#e7bc61 22%,#fff0bc 50%,#e7bc61 78%,transparent)}
+.team-winner-name::after{height:1px;left:27%;right:27%;bottom:1px;opacity:.7}
+.team-winner-body h1.team-winner-name{font-size:var(--team-name-size,94px);color:#ffdf8d;margin:28px 0 26px;letter-spacing:-1px}
+.team-winner-subtitle{font-size:26px;line-height:1.45;color:#f2e5bd;max-width:950px;margin:8px 0 0;text-wrap:balance}
+.team-winner-idle .team-winner-subtitle{max-width:730px}
+.team-winner-idle .team-winner-name{font-size:clamp(48px,5vw,77px);letter-spacing:5px}
+.team-winner-announcing .team-winner-name{font-size:82px;letter-spacing:10px;animation:team-announcing-pulse .8s ease-in-out infinite alternate}
+.team-winner-revealed .team-winner-name{animation:team-name-entrance 1.05s cubic-bezier(.15,.7,.24,1.15) both}
+.team-winner-revealed .team-winner-kicker{animation:team-kicker-entrance .7s ease-out both}
+.team-winner-revealed .team-winner-subtitle{animation:team-kicker-entrance .8s .3s ease-out both}
+.team-winner-bells{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;border-radius:inherit}
+.team-winner-bells svg{display:block;width:100%;height:100%}
+.team-winner-bell-swing{transform-box:fill-box;transform-origin:50% 0;animation:team-bells-swing 3.4s ease-in-out infinite}
+.team-winner-bell-pair-right .team-winner-bell-swing{animation-delay:-1.7s;animation-duration:3.8s}
+.team-winner-sparkle{transform-box:fill-box;transform-origin:center;animation:team-star-shimmer 2.9s ease-in-out var(--sparkle-delay,0s) infinite}
+.team-winner-revealed .team-winner-bell-swing{animation-duration:1.65s}
+.team-winner-slide .slide-nav{color:#fff1c8;z-index:2}
+.team-winner-slide .nav-note,.team-winner-slide .nav-back{color:#e8d7aa}
+.team-winner-slide .primary{background:#e6c274;color:#173f29;border-color:#ffe3a0}
+.team-winner-slide .primary:hover{background:#f4d891}
+.team-winner-slide .secondary{border-color:#bea365;color:#ffeac0}
+.team-winner-slide .secondary:hover{background:#ffffff12}
+@keyframes team-bells-swing{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes team-star-shimmer{0%,100%{opacity:.25;filter:brightness(.8)}50%{opacity:1;filter:brightness(1.25)}}
+@keyframes team-name-entrance{0%{opacity:0;transform:translateY(25px) scale(.66);filter:blur(8px)}58%{opacity:1;transform:translateY(-5px) scale(1.055);filter:blur(0)}80%{transform:translateY(2px) scale(.985)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes team-kicker-entrance{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes team-announcing-pulse{from{opacity:.55;transform:scale(.96)}to{opacity:1;transform:scale(1.025)}}
+.presenter-scaled .presenter-canvas .team-winner-body{padding:44px 17% 20px}
+.presenter-scaled .presenter-canvas .team-winner-body h1{font-size:51px}
+.presenter-scaled .presenter-canvas .team-winner-body h1.team-winner-name{font-size:var(--team-name-size,94px)}
+.presenter-scaled .presenter-canvas .team-winner-subtitle{font-size:27px}
+@media(max-width:1100px) and (min-width:701px){.team-winner-body{padding-left:16%;padding-right:16%}.team-winner-body h1{font-size:38px}.team-winner-name{font-size:min(var(--team-name-size,66px),66px)}.team-winner-subtitle{font-size:21px}.team-winner-kicker{font-size:14px!important;letter-spacing:3px}.team-winner-body::before,.team-winner-body::after{width:52px}}
+@media(max-width:700px){.team-winner-body{padding:75px 12% 30px;min-height:470px}.team-winner-body h1{font-size:34px}.team-winner-kicker{font-size:11px!important;letter-spacing:2px;margin-bottom:19px}.team-winner-name{font-size:clamp(29px,8vw,47px)!important;line-height:1.2;letter-spacing:-.4px;margin:27px 0 21px;padding-bottom:23px}.team-winner-idle .team-winner-name,.team-winner-announcing .team-winner-name{letter-spacing:3px}.team-winner-subtitle{font-size:20px}.team-winner-body::before,.team-winner-body::after{width:25px;opacity:.6}.team-winner-bells{opacity:.55}.team-winner-bell-pair{transform:translate(85px,65px) scale(.65)}.team-winner-bell-pair-right{transform:translate(1355px,65px) scale(.65)}.team-winner-slide::before{inset:10px}.team-winner-slide .slide-nav{padding-left:12%;padding-right:12%}}
+@media(prefers-reduced-motion:reduce){.team-winner-bell-swing,.team-winner-sparkle,.team-winner-revealed .team-winner-name,.team-winner-revealed .team-winner-kicker,.team-winner-revealed .team-winner-subtitle,.team-winner-announcing .team-winner-name{animation:none!important;filter:none!important}.team-winner-sparkle{opacity:.7}}
+/* The entry field lives only in the private presenter panel. */
+#presenter-panel .winning-team-panel{border:1px solid #ba9c58;padding:13px;border-radius:9px;margin:14px 0;background:#243d30}.winning-team-panel summary{font:600 14px/1.3 'Segoe UI',sans-serif;color:#f4dba5;cursor:pointer}.winning-team-panel[open] summary{margin-bottom:12px}.winning-team-panel label{display:block;font-size:12px;margin-bottom:7px}.winning-team-panel input{display:block;width:100%;box-sizing:border-box;border:1px solid #a6bc9b;background:#fff7dd;color:#173c2b;border-radius:6px;padding:10px;font:16px/1.3 'Segoe UI',sans-serif;margin-bottom:9px}.winning-team-panel input:focus{outline:2px solid #f7cf7e;outline-offset:2px}.winning-team-panel p{font-size:11px;line-height:1.5;color:#d2deca;margin:10px 0 0}.winning-team-panel button{margin:3px 3px 0 0}.winning-team-panel .winning-team-announce{background:#efd49b!important;color:#173c28!important;font-weight:700!important}.winning-team-panel .winning-team-error{color:#ffbdb0}
+.team-reveal-pulse{display:flex;gap:18px;justify-content:center;margin-top:28px}.team-reveal-pulse i{width:13px;height:13px;border-radius:50%;background:#edc86a;animation:team-dot-pulse 1.2s ease-in-out infinite}.team-reveal-pulse i:nth-child(2){animation-delay:.2s}.team-reveal-pulse i:nth-child(3){animation-delay:.4s}@keyframes team-dot-pulse{0%,100%{opacity:.3;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}@media(prefers-reduced-motion:reduce){.team-reveal-pulse i{animation:none}}
 </style>
 </head>
 <body data-phase="intro">
@@ -642,7 +691,7 @@ body[data-view=audience] .presenter-only{display:none!important}.presenter-scale
     <h3>Photographs & generated illustrations</h3><ul id="photo-credits" class="source-list"></ul>
     <p>The four figurine option images were generated with OpenAI ImageGen. They illustrate the choices; the three incorrect figures are fictional distractors. The answer shows a real caganer photograph. Decorative holly, baubles and candy canes are original SVG artwork.</p>
     <p>Display type: Fredoka, © The Fredoka Project Authors, distributed under the <a href="https://openfontlicense.org/" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a>. Embedded for offline use.</p>
-    <p class="dialog-note">Answer on your paper sheet; no selections or scores are recorded here. Presenter view opens a separate audience window on the same computer. Welcome music loops softly on the cover and Mingle slides; the quiz uses the seven MP3 files supplied by the organisers, with separate music and effects volume controls. Sound pauses during videos. The three film clips and the campanadas are local files. Only YouTube carols require Internet. The turrón sprite was generated with OpenAI ImageGen; the prize draw itself is silent.</p>
+    <p class="dialog-note">Answer on your paper sheet; no selections or scores are recorded here. Presenter view opens a separate audience window on the same computer. Welcome music loops softly on the cover and Mingle slides; the quiz uses the eight MP3 files supplied by the organisers, with separate music and effects volume controls. Sound pauses during videos. The three film clips and the campanadas are local files. Only YouTube carols require Internet. The turrón sprite was generated with OpenAI ImageGen; the prize draw itself is silent.</p>
     <p>Cover lettering: Lobster, by Pablo Impallari / The Lobster Project Authors, distributed under SIL Open Font License 1.1 and embedded for offline use. Cover party artwork is cropped from the event poster supplied by the organisers.</p>
   </dialog>
   <dialog id="photo-dialog" aria-label="Enlarged answer photograph"><button class="icon-button" id="close-photo" aria-label="Close photograph">×</button><div id="photo-dialog-content"></div></dialog>
@@ -1464,6 +1513,14 @@ function roundDecor(theme) {
   return content ? `<div class="round-decor round-decor-${theme}" aria-hidden="true">${content}</div>` : '';
 }
 
+// Festive vector artwork stays crisp on a large projector. Motion is decorative.
+function teamWinnerBells(){
+  const bell=`<path d="M0 0C-8-10-7-22 1-25C11-29 18-19 12-9L7 1" fill="none" stroke="#e8ba55" stroke-width="5"/><path d="M-17 11C-18-6 18-6 19 11L15 23H-14Z" fill="#a66a24"/><path d="M-43 79C-28 65-34 42-24 25C-14 7 17 7 27 26C36 42 31 66 47 79L48 89H-44Z" fill="url(#team-bell-gold)" stroke="#b47c2b" stroke-width="2"/><path d="M-23 31C-31 48-23 61-32 74" fill="none" stroke="#fff1ac" stroke-width="7" stroke-linecap="round" opacity=".7"/><ellipse cx="2" cy="88" rx="47" ry="11" fill="#ae6b20"/><ellipse cx="2" cy="85" rx="44" ry="8" fill="#ffe5a0"/><path d="M-6 86V98" stroke="#d69c34" stroke-width="5"/><circle cx="-6" cy="101" r="9" fill="#dca545"/><path d="M-32 67Q1 80 34 68" fill="none" stroke="#e4ae45" stroke-width="3"/>`;
+  const pair=`<path d="M0-114V-14" stroke="#c79c49" stroke-width="2" stroke-dasharray="3 6"/><g class="team-winner-bell-swing"><g transform="translate(-34 22) rotate(19)">${bell}</g><g transform="translate(35 21) rotate(-20)">${bell}</g><path d="M-4 6C-30-38-72-30-64-9C-57 9-23 1-4 6ZM5 6C28-37 68-29 64-8C59 10 26 2 5 6Z" fill="#c63c43" stroke="#7b2029" stroke-width="2"/><path d="M-8 8-29 58-8 49 4 65 9 9M8 8 35 51 39 32 56 36 17 2" fill="#b92d38"/><ellipse cx="4" cy="6" rx="15" ry="12" fill="#e05b57"/><path d="M-55-15Q-36-22-19-4M21-5Q39-23 56-15" stroke="#ef9a82" stroke-width="4" fill="none" stroke-linecap="round"/></g>`;
+  const star=(x,y,s,delay)=>`<g class="team-winner-sparkle" style="--sparkle-delay:${delay}s" transform="translate(${x} ${y}) scale(${s})"><path d="M0-14 4-4 14 0 4 4 0 14-4 4-14 0-4-4Z" fill="#f4cd75"/><circle cx="20" cy="15" r="2" fill="#fff0bd"/></g>`;
+  return `<div class="team-winner-bells" aria-hidden="true"><svg viewBox="0 0 1440 806" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="team-bell-gold" x1="0" x2="1" y1="0" y2=".3"><stop stop-color="#ad6b20"/><stop offset=".23" stop-color="#efbb51"/><stop offset=".48" stop-color="#ffec9a"/><stop offset=".72" stop-color="#e9af3b"/><stop offset="1" stop-color="#a7641b"/></linearGradient></defs><g class="team-winner-bell-pair" transform="translate(125 113) scale(.98)">${pair}</g><g class="team-winner-bell-pair team-winner-bell-pair-right" transform="translate(1315 113) scale(.98)">${pair}</g><path d="M42 405Q77 445 114 405T186 405M1254 405Q1290 445 1327 405T1398 405" fill="none" stroke="#d7ac58" stroke-width="2" opacity=".5"/>${star(130,476,1.05,-.2)}${star(1310,476,1.05,-1.1)}${star(230,568,.7,-.7)}${star(1210,568,.7,-1.8)}${star(316,128,.6,-1.5)}${star(1124,128,.6,-.5)}<g fill="#dfbb6d" opacity=".5"><circle cx="201" cy="346" r="3"/><circle cx="1239" cy="346" r="3"/><circle cx="92" cy="568" r="3"/><circle cx="1348" cy="568" r="3"/><circle cx="258" cy="206" r="2"/><circle cx="1182" cy="206" r="2"/></g></svg></div>`;
+}
+
 /* Original sound files supplied for Spanish Quiz Night. Keep these files in
    the media folder beside the HTML for an offline presentation. */
 const QUIZ_AUDIO_SOURCES = Object.freeze({
@@ -1473,7 +1530,8 @@ const QUIZ_AUDIO_SOURCES = Object.freeze({
   spanish: 'media/alexzavesa-christmas-whoosh-3-458067.mp3',
   quizStart: 'media/alexzavesa-christmas-whoosh-6-458068.mp3',
   welcome: 'media/background_music-new-yearx27s-sound-of-magic-7-441516.mp3',
-  answer: 'media/dragon-studio-christmas-bells-02-439604.mp3'
+  answer: 'media/dragon-studio-christmas-bells-02-439604.mp3',
+  teamWinner: 'media/bombinsound-christmas-celebration-event-version-7-christmas-preparations-637681.mp3'
 });
 
 /* File-based sound cues and a quiet welcome loop. Playback belongs to only
@@ -1571,6 +1629,7 @@ const festiveAudio = (() => {
       : kind === 'spanish' ? 'spanish'
       : kind === 'quiz-start' ? 'quizStart'
       : kind === 'answer' ? 'answer'
+      : kind === 'team-winner' ? 'teamWinner'
       : kind === 'question' ? (++questionCue % 2 ? 'question1' : 'question2')
       : null;
     if (!key) return Promise.resolve(false);
@@ -1590,6 +1649,17 @@ const festiveAudio = (() => {
         return true;
       }, () => false);
     } catch (_) { return Promise.resolve(false); }
+  }
+
+  function prepare(kind) {
+    if(kind!=='team-winner'||!AudioType||!outputActive)return false;
+    // Fetch during the suspense, without playing, so the reveal starts promptly.
+    stopEffect();
+    if(!effect)effect=makeAudio(QUIZ_AUDIO_SOURCES.teamWinner);
+    else if(currentEffectKey!=='teamWinner')effect.src=QUIZ_AUDIO_SOURCES.teamWinner;
+    currentEffectKey='teamWinner';effect.preload='auto';
+    try{effect.load?.();}catch(_){}
+    return true;
   }
 
   function start() {
@@ -1655,7 +1725,7 @@ const festiveAudio = (() => {
   }
 
   return {
-    setup, start, play, setScene, setMediaActive, setOutputActive,
+    setup, start, play, prepare, setScene, setMediaActive, setOutputActive,
     setPreferences, getPreferences: () => ({ ...preferences })
   };
 })();
@@ -1665,6 +1735,7 @@ function startFestiveAudio() { return festiveAudio.start(); }
 function setFestiveMediaActive(active) { festiveAudio.setMediaActive(active); }
 function setFestiveSectionActive() { /* Sounds follow the slide kind in setAudioScene. */ }
 function playTransitionSound(kind = 'question') { return festiveAudio.play(kind); }
+function prepareTransitionSound(kind) { return festiveAudio.prepare(kind); }
 function getTransitionSoundEnabled() { return festiveAudio.getPreferences().enabled; }
 function setTransitionSoundEnabled(active) { festiveAudio.setPreferences({ enabled: Boolean(active) }); }
 function setAudioScene(kind) { festiveAudio.setScene(kind); }
@@ -1755,6 +1826,80 @@ function mountRaffle(){
   raffleTimer=window.setInterval(tick,85);tick();
 }
 
+/* A manually entered team name stays private until the timed announcement. */
+const TEAM_REVEAL_DURATION=4000;
+let winningTeamState={status:'idle',name:'',startedAt:0,revealAt:0,revealId:''};
+let winningTeamDraft='',pendingWinningTeamName='',winningTeamTimer=null,teamSoundPending=false,lastWinningRevealPlayed='';
+function cleanWinningTeamName(value){return typeof value==='string'?Array.from(value.replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim()).slice(0,80).join(''):'';}
+function getWinningTeamDraft(){return winningTeamDraft;}
+function setWinningTeamDraft(value){
+  if(window.quizControl?.view==='audience'||winningTeamState.status==='announcing')return false;
+  winningTeamDraft=typeof value==='string'?value.slice(0,160):'';return true;
+}
+function getPublicWinningTeamState(){
+  return {status:winningTeamState.status,name:winningTeamState.status==='revealed'?winningTeamState.name:'',startedAt:winningTeamState.startedAt,revealAt:winningTeamState.revealAt,revealId:winningTeamState.revealId};
+}
+function applyWinningTeamState(value){
+  if(!value||!['idle','announcing','revealed'].includes(value.status))return false;
+  const name=value.status==='revealed'?cleanWinningTeamName(value.name):'';
+  const revealId=typeof value.revealId==='string'?value.revealId.slice(0,100):'';
+  if(value.status==='revealed'&&(!name||!revealId))return false;
+  if(value.status==='announcing'&&(!revealId||!Number.isFinite(value.startedAt)||!Number.isFinite(value.revealAt)||value.revealAt<=value.startedAt||value.revealAt-value.startedAt>TEAM_REVEAL_DURATION+100))return false;
+  teamSoundPending=value.status==='revealed'&&winningTeamState.status==='announcing'&&winningTeamState.revealId===revealId&&slides[slideIndex].kind==='team-winner';
+  winningTeamState={status:value.status,name,startedAt:Number(value.startedAt)||0,revealAt:Number(value.revealAt)||0,revealId};return true;
+}
+function stopWinningTeamTimer(){if(winningTeamTimer!==null){window.clearTimeout(winningTeamTimer);winningTeamTimer=null;}}
+function resetWinningTeam(){
+  if(window.quizControl?.view==='audience')return false;
+  stopWinningTeamTimer();pendingWinningTeamName='';teamSoundPending=false;
+  winningTeamState={status:'idle',name:'',startedAt:0,revealAt:0,revealId:''};
+  if(slides[slideIndex].kind==='team-winner')render(false);else{window.quizControl?.publish();window.quizControl?.refresh();}return true;
+}
+function announceWinningTeam(value=getWinningTeamDraft()){
+  if(window.quizControl?.view==='audience'||winningTeamState.status==='announcing')return false;
+  const name=cleanWinningTeamName(value);if(!name)return false;
+  winningTeamDraft=name;pendingWinningTeamName=name;teamSoundPending=false;
+  void startFestiveAudio();
+  if(slides[slideIndex].kind!=='team-winner'){
+    const index=slides.findIndex(slide=>slide.kind==='team-winner');if(index<0)return false;
+    if(window.quizControl)window.quizControl.go(index);else{slideIndex=index;render();}
+  }
+  const now=Date.now();
+  winningTeamState={status:'announcing',name:'',startedAt:now,revealAt:now+TEAM_REVEAL_DURATION,revealId:`team-${now}-${Math.random().toString(36).slice(2,10)}`};
+  render(false);return true;
+}
+function winningTeamBeforeRender(){
+  stopWinningTeamTimer();
+  if(slides[slideIndex].kind!=='team-winner'){
+    teamSoundPending=false;
+    if(winningTeamState.status==='announcing'){
+      winningTeamState={status:'idle',name:'',startedAt:0,revealAt:0,revealId:''};pendingWinningTeamName='';
+    }
+  }
+}
+function renderWinningTeam(){
+  const {status,name}=winningTeamState,revealed=status==='revealed',announcing=status==='announcing';
+  const size=name.length>45?57:name.length>25?72:94;
+  return startSlide(`team-winner-slide team-winner-${status}`,`${teamWinnerBells()}<div class="slide-body team-winner-body"><p class="eyebrow">${revealed?'SPANISH QUIZ NIGHT · OUR CHAMPIONS':'THE FINAL SCORES ARE IN'}</p><p class="team-winner-kicker">${revealed?'THE WINNING TEAM':announcing?'AND THE WINNING TEAM IS…':'TIME TO CELEBRATE'}</p><h1 id="slide-title" ${revealed?`class="team-winner-name" style="--team-name-size:${size}px"`:''}>${revealed?esc(name):announcing?'A little suspense…':'Who topped<br>the quiz?'}</h1><p class="team-winner-subtitle">${revealed?'¡Enhorabuena! Come and collect your prizes.':announcing?'Get ready for a big round of applause!':'The winning team will be announced in a moment.'}</p>${announcing?'<div class="team-reveal-pulse" aria-hidden="true"><i></i><i></i><i></i></div>':''}</div>`,'The campanadas','TEAM PRIZE PRESENTATION');
+}
+function mountWinningTeam(){
+  if(slides[slideIndex].kind!=='team-winner')return;
+  if(winningTeamState.status==='revealed'&&teamSoundPending){
+    teamSoundPending=false;
+    if(lastWinningRevealPlayed!==winningTeamState.revealId){lastWinningRevealPlayed=winningTeamState.revealId;void playTransitionSound('team-winner');}
+  }
+  if(winningTeamState.status!=='announcing')return;
+  if(typeof prepareTransitionSound==='function')prepareTransitionSound('team-winner');
+  if(window.quizControl?.view==='audience')return;
+  if(!pendingWinningTeamName){resetWinningTeam();return;}
+  const revealId=winningTeamState.revealId;
+  winningTeamTimer=window.setTimeout(()=>{
+    winningTeamTimer=null;
+    if(slides[slideIndex].kind!=='team-winner'||winningTeamState.status!=='announcing'||winningTeamState.revealId!==revealId)return;
+    winningTeamState={...winningTeamState,status:'revealed',name:pendingWinningTeamName};pendingWinningTeamName='';teamSoundPending=true;render(false);
+  },Math.max(0,winningTeamState.revealAt-Date.now()));
+}
+
 'use strict';
 const stage=document.querySelector('#stage');
 const letters=['A','B','C','D'];
@@ -1774,7 +1919,7 @@ for(const section of activeSections){
   for(const question of section.questions)slides.push({kind:'answer',section,question});
   slides.push({kind:'section-key',section});
 }
-slides.push({kind:'campanadas-guide'},{kind:'campanadas-video'},{kind:'raffle'},{kind:'closing'},{kind:'follow-instagram'});
+slides.push({kind:'team-winner'},{kind:'campanadas-guide'},{kind:'campanadas-video'},{kind:'raffle'},{kind:'closing'},{kind:'follow-instagram'});
 let slideIndex=0,answersUnlocked=false,phase='intro';
 const sourcesDialog=document.querySelector('#sources-dialog');
 const photoDialog=document.querySelector('#photo-dialog');
@@ -1786,12 +1931,13 @@ function nav(label='Next slide',note=''){
 }
 function decor(quiet=true){return document.body.dataset.festive==='true'?festiveDecor(quiet?'quiet':'full'):roundDecor(document.body.dataset.theme);}
 function startSlide(className,body,next='Next slide',note='',lang='en'){
-  const pop=['section','answer-section','mingle','ready','campanadas-guide','raffle','closing','follow-instagram'].includes(slides[slideIndex].kind);
+  const pop=['section','answer-section','mingle','ready','team-winner','campanadas-guide','raffle','closing','follow-instagram'].includes(slides[slideIndex].kind);
   const burst=pop?`<div class="section-pop-burst" aria-hidden="true">${Array.from({length:12},(_,i)=>`<i style="--burst-x:${Math.round(Math.cos(i*Math.PI/6)*430)}px;--burst-y:${Math.round(Math.sin(i*Math.PI/6)*260)}px"></i>`).join('')}</div>`:'';
   return `<section class="slide ${className} ${pop?'new-section-pop':''}" lang="${lang}" aria-labelledby="slide-title">${decor()}${burst}${body}${nav(next,note)}</section>`;
 }
 function render(focus=true){
   raffleBeforeRender();
+  winningTeamBeforeRender();
   if(videoDialog.open)videoDialog.close();
   if(photoDialog.open)photoDialog.close();
   if(sourcesDialog.open)sourcesDialog.close();
@@ -1813,11 +1959,12 @@ function render(focus=true){
   const sectionName=slide.section?.title;
   document.querySelector('#section-label').textContent=sectionName||'SPANISH QUIZ NIGHT';
   document.querySelector('#slide-counter').textContent=slide.question?`${slide.kind==='question'?'QUESTION':'ANSWER'} ${slide.question.number} / ${slide.section.questions.length}`:`SLIDE ${slideIndex+1} / ${slides.length}`;
-  const renders={cover:renderCover,mingle:renderMingle,section:renderSection,'answer-section':renderSection,question:renderQuestion,answer:renderAnswer,ready:renderReady,'section-key':renderSectionKey,'campanadas-guide':renderCampanadasGuide,'campanadas-video':renderCampanadasVideo,raffle:renderRaffle,closing:renderClosing,'follow-instagram':renderInstagram};
+  const renders={cover:renderCover,mingle:renderMingle,section:renderSection,'answer-section':renderSection,question:renderQuestion,answer:renderAnswer,ready:renderReady,'section-key':renderSectionKey,'team-winner':renderWinningTeam,'campanadas-guide':renderCampanadasGuide,'campanadas-video':renderCampanadasVideo,raffle:renderRaffle,closing:renderClosing,'follow-instagram':renderInstagram};
   stage.innerHTML=renders[slide.kind](slide);
   bindControls();
   window.quizControl?.onRender();
   mountRaffle();
+  mountWinningTeam();
   document.querySelector('#announcer').textContent=`${sectionName?sectionName+'. ':''}${stage.querySelector?.('#slide-title')?.textContent||slide.kind}`;
   if(focus)focusStage();
 }
@@ -1871,7 +2018,7 @@ function renderCarolAnswer({section,question:q}){
   return startSlide('carol-answer-slide',`<div class="slide-body carol-answer-body"><p class="eyebrow">CHRISTMAS · ANSWER ${q.number} · VILLANCICOS</p><h1 id="slide-title"><span class="correct-letters">${esc(answerLabel(q))}</span>${esc(answerText(q))}</h1><p class="carol-fact">${esc(q.fact)}</p><div class="carol-cards">${cards}</div><p class="video-note">Play a short excerpt. YouTube videos need an internet connection.</p></div>`,'Next answer','THE ANSWER ROUND');
 }
 function renderSectionKey({section}){
-  return startSlide('summary-slide',`<div class="slide-body summary-body"><div class="summary-heading"><div><p class="eyebrow">THE ANSWER KEY</p><h1 id="slide-title">${esc(section.title)}</h1></div></div><ol class="answer-key">${section.questions.map(q=>`<li><span class="key-number">${String(q.number).padStart(2,'0')}</span><span lang="${q.lang}">${esc(q.shortTitle)}</span><strong lang="${q.lang}">${answerLabel(q)?esc(answerLabel(q))+'. ':''}${esc(answerText(q))}${q.answerEn?`<em class="key-translation" lang="en">${esc(q.answerEn)}</em>`:''}</strong><button class="key-review" data-review="${q.id}" aria-label="Review answer ${q.number}">Review</button></li>`).join('')}</ol></div>`,section.id==='navidad'?'The campanadas':'Next answer section','THE ANSWER ROUND');
+  return startSlide('summary-slide',`<div class="slide-body summary-body"><div class="summary-heading"><div><p class="eyebrow">THE ANSWER KEY</p><h1 id="slide-title">${esc(section.title)}</h1></div></div><ol class="answer-key">${section.questions.map(q=>`<li><span class="key-number">${String(q.number).padStart(2,'0')}</span><span lang="${q.lang}">${esc(q.shortTitle)}</span><strong lang="${q.lang}">${answerLabel(q)?esc(answerLabel(q))+'. ':''}${esc(answerText(q))}${q.answerEn?`<em class="key-translation" lang="en">${esc(q.answerEn)}</em>`:''}</strong><button class="key-review" data-review="${q.id}" aria-label="Review answer ${q.number}">Review</button></li>`).join('')}</ol></div>`,section.id==='navidad'?'The winning team':'Next answer section','THE ANSWER ROUND');
 }
 function renderCampanadasGuide(){
   return startSlide('guide-slide',`<div class="slide-body guide-body"><p class="eyebrow">LET’S TRY A SPANISH NEW YEAR</p><h1 id="slide-title">Wait for the<br><span>right bells!</span></h1><div class="bell-steps"><article><span class="bell-number">01</span><h2 lang="es">El carillón</h2><p>The ball comes down and a musical chime plays.<strong>Get ready. Wait!</strong></p></article><article><span class="bell-number">02</span><h2 lang="es">Los cuartos</h2><p>Four sets of double chimes come next.<strong>These are not the grape bells. Keep waiting!</strong></p></article><article><span class="bell-number">03</span><h2 lang="es">Las campanadas</h2><p>The twelve midnight chimes begin.<strong>One grape with each chime. Twelve in total!</strong></p></article></div><p class="bell-vocab"><span><b lang="es">Las uvas</b> · grapes</span><span><b lang="es">Nochevieja</b> · New Year’s Eve</span><span lang="es">¡Feliz Año Nuevo!</span></p></div>`,'Let’s do the campanadas');
@@ -1892,7 +2039,7 @@ function next(){
   render();
 }
 function previous(){if(!window.quizControl?.isRemote())void startFestiveAudio();if(slideIndex>0){slideIndex--;render();}}
-function restart(){stopRaffleTimer();raffleState={count:raffleState.count,status:'idle',winner:null,startedAt:0,endsAt:0,drawId:''};answersUnlocked=false;slideIndex=0;render();}
+function restart(){stopWinningTeamTimer();winningTeamState={status:'idle',name:'',startedAt:0,revealAt:0,revealId:''};pendingWinningTeamName='';teamSoundPending=false;winningTeamDraft='';stopRaffleTimer();raffleState={count:raffleState.count,status:'idle',winner:null,startedAt:0,endsAt:0,drawId:''};answersUnlocked=false;slideIndex=0;render();}
 function bindControls(){
   const back=document.querySelector('#previous-button'),forward=document.querySelector('#next-button');
   if(back)back.onclick=previous;if(forward)forward.onclick=next;
@@ -2004,7 +2151,7 @@ render(false);
     try{window.localStorage?.setItem(storageKey,JSON.stringify(message));}catch{}
     if(payload.type==='state')try{window.localStorage?.setItem(savedStateKey,JSON.stringify(message));}catch{}
   }
-  function state(){return {type:'state',index:slideIndex,unlocked:answersUnlocked,effects:getTransitionSoundEnabled(),audio:getAudioPreferences(),raffle:{...raffleState}};}
+  function state(){return {type:'state',index:slideIndex,unlocked:answersUnlocked,effects:getTransitionSoundEnabled(),audio:getAudioPreferences(),raffle:{...raffleState},winningTeam:getPublicWinningTeamState()};}
   function updateAudioOwnership(){setAudioOutputActive(view==='audience'||!connected);}
   function receive(message){
     if(!message||message.sender===sender||seen.has(message.id))return;
@@ -2020,7 +2167,10 @@ render(false);
       try{
         if(message.audio)setAudioPreferences(message.audio);else setTransitionSoundEnabled(message.effects!==false);
         if(message.raffle)applyRaffleState(message.raffle);
-        const changed=slideIndex!==message.index||Boolean(message.unlocked)!==answersUnlocked||slides[message.index].kind==='raffle';
+        const oldWinningTeam=JSON.stringify(getPublicWinningTeamState());
+        if(message.winningTeam)applyWinningTeamState(message.winningTeam);
+        const teamChanged=oldWinningTeam!==JSON.stringify(getPublicWinningTeamState());
+        const changed=slideIndex!==message.index||Boolean(message.unlocked)!==answersUnlocked||slides[message.index].kind==='raffle'||(slides[message.index].kind==='team-winner'&&teamChanged);
         answersUnlocked=Boolean(message.unlocked);slideIndex=message.index;if(changed)render(false);
       }finally{remote=false;}
       return;
@@ -2064,7 +2214,7 @@ render(false);
     const slide=slides[slideIndex],q=slide.question;
     const upcoming=slides[slideIndex+1];
     const navSections=activeSections.map(section=>`<div class="presenter-round"><div class="presenter-round-title"><strong>${esc(section.title)}</strong><button data-jump-kind="section" data-section="${section.id}">Questions</button><button data-jump-kind="answer-section" data-section="${section.id}">Answers</button></div><div class="presenter-question-links">${section.questions.map(question=>`<button data-jump-question="${question.id}" class="${q?.id===question.id?'current':''}" title="${esc(question.question)}">${question.number}</button>`).join('')}</div></div>`).join('');
-    panel.innerHTML=`<div class="presenter-panel-top"><p class="presenter-label">PRESENTER VIEW</p><button id="exit-presenter" aria-label="Close presenter panel">×</button></div><div class="projection-controls"><button id="open-audience" class="panel-primary">${connected?'Focus audience screen':'Open audience screen'}</button><p id="connection-status" role="status">${connected?'● Audience connected':'Open the screen, move it to the projector, then activate it.'}</p></div><div class="presenter-transport"><button id="panel-back" ${slideIndex===0?'disabled':''}>← Back</button><span>${slideIndex+1} / ${slides.length}</span><button id="panel-next">Next →</button></div><div class="presenter-quick"><button data-jump-kind="cover">Start</button><button data-jump-kind="mingle">Mingle</button><button data-jump-kind="ready">Answer round</button><button data-jump-kind="campanadas-guide">Campanadas</button><button data-jump-kind="raffle">Prize draw</button><button data-jump-kind="closing">Closing</button><button data-jump-kind="follow-instagram">Instagram</button></div>${q?.options&&slide.kind==='question'?'<button id="show-options" class="panel-wide">Show all options now</button>':''}${projectedVideo?`<div class="remote-video-controls"><strong>Video on the audience screen</strong><p>YouTube: use its on-screen controls.</p><button data-remote-action="pause-video">Pause</button><button data-remote-action="play-video">Play</button><button data-remote-action="restart-video">Replay</button><button id="remote-close">Close video</button></div>`:''}${audioPanelHTML()}${rafflePanelHTML()}<details class="presenter-notes" ${q?'open':''}><summary>Private answer & notes</summary>${q?`<strong>${answerLabel(q)?esc(answerLabel(q))+'. ':''}${esc(answerText(q))}</strong><p>${esc(q.fact)}</p>`:'<p>Choose a question to see its answer here.</p>'}</details><p class="up-next">NEXT · ${esc(upcoming?.question?.question||upcoming?.section?.title||upcoming?.kind||'End')}</p><nav class="presenter-index" aria-label="Jump to a section">${navSections}</nav><p class="presenter-help">← → / Space: advance · Home: cover · G: presenter panel · F: full screen<br>Only this window shows the private answer and navigation panel.</p>`;
+    panel.innerHTML=`<div class="presenter-panel-top"><p class="presenter-label">PRESENTER VIEW</p><button id="exit-presenter" aria-label="Close presenter panel">×</button></div><div class="projection-controls"><button id="open-audience" class="panel-primary">${connected?'Focus audience screen':'Open audience screen'}</button><p id="connection-status" role="status">${connected?'● Audience connected':'Open the screen, move it to the projector, then activate it.'}</p></div><div class="presenter-transport"><button id="panel-back" ${slideIndex===0?'disabled':''}>← Back</button><span>${slideIndex+1} / ${slides.length}</span><button id="panel-next">Next →</button></div><div class="presenter-quick"><button data-jump-kind="cover">Start</button><button data-jump-kind="mingle">Mingle</button><button data-jump-kind="ready">Answer round</button><button data-jump-kind="team-winner">Team winner</button><button data-jump-kind="campanadas-guide">Campanadas</button><button data-jump-kind="raffle">Prize draw</button><button data-jump-kind="closing">Closing</button><button data-jump-kind="follow-instagram">Instagram</button></div>${q?.options&&slide.kind==='question'?'<button id="show-options" class="panel-wide">Show all options now</button>':''}${projectedVideo?`<div class="remote-video-controls"><strong>Video on the audience screen</strong><p>YouTube: use its on-screen controls.</p><button data-remote-action="pause-video">Pause</button><button data-remote-action="play-video">Play</button><button data-remote-action="restart-video">Replay</button><button id="remote-close">Close video</button></div>`:''}${winningTeamPanelHTML()}${audioPanelHTML()}${rafflePanelHTML()}<details class="presenter-notes" ${q?'open':''}><summary>Private answer & notes</summary>${q?`<strong>${answerLabel(q)?esc(answerLabel(q))+'. ':''}${esc(answerText(q))}</strong><p>${esc(q.fact)}</p>`:'<p>Choose a question to see its answer here.</p>'}</details><p class="up-next">NEXT · ${esc(upcoming?.question?.question||upcoming?.section?.title||upcoming?.kind||'End')}</p><nav class="presenter-index" aria-label="Jump to a section">${navSections}</nav><p class="presenter-help">← → / Space: advance · Home: cover · G: presenter panel · F: full screen<br>Only this window shows the private answer and navigation panel.</p>`;
     panel.querySelector('#exit-presenter').onclick=()=>setView('presentation');
     panel.querySelector('#open-audience').onclick=openAudience;
     panel.querySelector('#panel-back').onclick=previous;panel.querySelector('#panel-next').onclick=next;
@@ -2082,6 +2232,12 @@ render(false);
       if(!startRaffle(value))panel.querySelector('#raffle-error').textContent='Enter a whole number from 1 to 9999.';
     };
     panel.querySelector('#raffle-reset').onclick=resetRaffle;
+    const winningName=panel.querySelector('#winning-team-name');
+    winningName.oninput=()=>{setWinningTeamDraft(winningName.value);};
+    panel.querySelector('#announce-winning-team').onclick=()=>{
+      if(!announceWinningTeam(winningName.value))panel.querySelector('#winning-team-error').textContent='Enter the winning team name before announcing.';
+    };
+    panel.querySelector('#reset-winning-team').onclick=resetWinningTeam;
     panel.querySelector('#audio-start').onclick=()=>{void startFestiveAudio();};
     const music=panel.querySelector('#music-volume'),effects=panel.querySelector('#effects-volume');
     music.oninput=()=>{setMusicVolume(Number(music.value)/100);panel.querySelector('#music-volume-value').textContent=music.value+'%';send({type:'action',action:'audio-preferences',preferences:getAudioPreferences()});};
@@ -2090,6 +2246,10 @@ render(false);
   function audioPanelHTML(){
     const prefs=getAudioPreferences(),music=Math.round(prefs.musicVolume*100),effects=Math.round(prefs.effectsVolume*100);
     return `<details class="audio-panel" ${['cover','mingle'].includes(slides[slideIndex].kind)?'open':''}><summary id="audio-panel-title">Presentation sound</summary><button id="audio-start" ${connected?'disabled':''}>Enable welcome music</button><label for="music-volume">Welcome music <span id="music-volume-value">${music}%</span></label><input id="music-volume" type="range" min="0" max="100" value="${music}" aria-label="Welcome music volume"><label for="effects-volume">Transition effects <span id="effects-volume-value">${effects}%</span></label><input id="effects-volume" type="range" min="0" max="100" value="${effects}" aria-label="Transition effects volume"><p>Music loops on the cover and Mingle slides, then stops for the quiz.${connected?' Click Activate screen once on the audience window.':''}</p></details>`;
+  }
+  function winningTeamPanelHTML(){
+    const announcing=winningTeamState.status==='announcing';
+    return `<details class="winning-team-panel" ${slides[slideIndex].kind==='team-winner'?'open':''}><summary>Winning team announcement</summary><label for="winning-team-name">Team name · private until revealed</label><input id="winning-team-name" type="text" maxlength="80" autocomplete="off" value="${esc(getWinningTeamDraft())}" placeholder="Enter the winning team name" ${announcing?'disabled':''}><div><button id="announce-winning-team" class="winning-team-announce" ${announcing?'disabled':''}>${announcing?'Announcing…':'Announce winner'}</button><button id="reset-winning-team">Hide / reset</button></div><p>Four seconds of suspense, then the name and celebration sound. Draft names stay on this screen.</p><p id="winning-team-error" class="winning-team-error" role="status"></p></details>`;
   }
   function rafflePanelHTML(){
     const running=raffleState.status==='running';
@@ -2146,7 +2306,7 @@ render(false);
   if(view==='presenter'){
     try{
       const saved=JSON.parse(window.localStorage?.getItem(savedStateKey)||'null');
-      if(saved?.type==='state'&&Number.isInteger(saved.index)&&saved.index>=0&&saved.index<slides.length){if(saved.raffle)applyRaffleState(saved.raffle);answersUnlocked=Boolean(saved.unlocked);slideIndex=saved.index;render(false);}
+      if(saved?.type==='state'&&Number.isInteger(saved.index)&&saved.index>=0&&saved.index<slides.length){if(saved.raffle)applyRaffleState(saved.raffle);if(saved.winningTeam)applyWinningTeamState(saved.winningTeam);answersUnlocked=Boolean(saved.unlocked);slideIndex=saved.index;render(false);}
     }catch{}
     send({type:'presenter-online'});
   }
