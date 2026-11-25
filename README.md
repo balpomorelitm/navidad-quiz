@@ -2,7 +2,7 @@
 
 [Open the presentation](https://balpomorelitm.github.io/navidad-quiz/)
 
-A classroom presentation with 42 questions: Geography (5), History (5), Literature (10), Cinema & TV (10), Christmas (12). The final three questions/options in every round are in Spanish. All 18 Spanish solutions have italic English answer and explanation translations, shown only in the correction round.
+A classroom presentation with 42 questions: Geography (5), History (5), Literature (10), Cinema & TV (10), Christmas (12). The final three questions/options in every round are in Spanish. All 19 Spanish solutions have italic English answer and explanation translations, shown only in the correction round.
 
 Start with the Mingle Challenge (10 of 15 tasks, a different person each time, turron prize draw). Quiz questions come first, followed by sectioned answers, the winning-team announcement, an English guide to Spain's New Year chimes, the local official 2025-2026 Antena 3 excerpt, a prize draw, Christmas greetings and a final Instagram QR slide. There are 108 slides. Sport and Food remain hidden until materials arrive.
 
@@ -27,3 +27,5 @@ The cover borrows the supplied poster's illustrated style with real Lobster lett
 For local use, keep `index.html` and `media/` together. Photographs, styles, scripts and fonts are embedded. The three cropped film clips, nine MP3 files and 78.8-second 720p campanadas excerpt work offline. Only YouTube carols require Internet. The new local video starts at exactly 1:14 of the supplied original. Its 18.42 MB H.264/AAC fast-start copy preserves 1280 x 720 resolution and ends before advertising. The local campanadas include the preamble, twelve chimes and New Year greeting; the old forced 70-second stop was removed. The official source link remains available.
 
 The organisers supplied 30 Word-document images and the original film clips. Additional portraits, book covers, answer-only cinema posters and the official university logo include source credits. Credits and research references are available after revealing answers. Third-party assets retain their respective rights.
+
+Cinema question 6 is now the Spanish Pedro Pascal question: Euphoria, Narcos, The Mandalorian, The Last of Us (answer A). Two credited CC BY-SA portraits appear in the question and correction gallery. The Fortuna gallery uses the identified Dua Lipa / Callum Turner photograph; unverified-photo notices have been removed from projected captions.
