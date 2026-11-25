@@ -1,17 +1,21 @@
-﻿# Spanish Quiz Night - Christmas Edition
+# Spanish Quiz Night - Christmas Edition
 
 [Open the presentation](https://balpomorelitm.github.io/navidad-quiz/)
 
-A classroom presentation for university students learning Spanish. It includes **42 questions** across Geography (5), History (5), Literature (10), Cinema & TV (10), and Christmas (12). The final three questions, options and answer explanations in every round are in Spanish.
+A classroom presentation with 42 questions: Geography (5), History (5), Literature (10), Cinema & TV (10), Christmas (12). The final three questions/options in every round are in Spanish. All 18 Spanish solutions have italic English answer and explanation translations, shown only in the correction round.
 
-The event starts with the Mingle Challenge: complete 10 of 15 tasks, use a different person for every task, and hand in the card to enter the turrón prize draw. All quiz questions come first; answers and explanations follow in separate sections. The evening closes with an English guide to the Spanish New Year chimes and the official 2025-2026 Antena 3 video with Cristina Pedroche and Alberto Chicote.
+Start with the Mingle Challenge (10 of 15 tasks, a different person each time, turron prize draw). Quiz questions come first, followed by sectioned answers, an English guide to Spain's New Year chimes, the official 2025-2026 Antena 3 video, and a closing slide. Sport and Food remain hidden until materials arrive.
 
-Options are static for discussion and paper answer sheets. The website records no selections or scores. Advance with the buttons, arrow keys, Page Up / Page Down, or Enter / Space when the slide has focus. Answer mode unlocks after the complete question round.
+## Presenting
 
-Each round has its own visual theme. Christmas keeps its snow, lights, garlands, photographs, radish gallery and three carol videos. The presentation scales with screen height and supports fullscreen. Original gentle chimes can be muted and pause during videos and outside festive sections.
+Click **Presenter** (or press **G**) to open the private control panel. It provides immediate access to the cover, every section, individual questions, solutions and the campanadas. Answers remain locked during the ordinary question sequence; the presenter can deliberately jump directly to an answer section.
 
-For local use, keep `index.html` and the `media/` folder together. All photographs, styles, scripts and the display font are embedded. The three local movie clips work offline. YouTube carols and the official Antena 3 campanadas need Internet and load only when Play is pressed. The campanadas pause at 70 seconds; an official source link is supplied.
+Click **Open audience screen**, move that second window to the projector, and click **Activate screen** once to enable video and sound. Press **F** for full screen. The projected window omits private notes and navigation controls. Both windows must use the same browser and computer; state is synchronized through BroadcastChannel with local-storage fallback.
 
-The 30 Word-document images and three source film clips were supplied by the organisers. Movie excerpts have neutral filenames and cropped player bars so their titles do not reveal the answers. Original image authorship was not supplied. Existing Christmas photo licences, generated illustration disclosures, research sources and font credits are available under **Sources & credits** in the answer round. Third-party assets retain their respective rights.
+Use arrows, Page Up/Page Down, Enter/Space, or the panel buttons to advance. **Home** returns to the cover. Options appear A, B, C, D one second apart; the presenter can show all immediately. Options are static: no selections or scores are recorded.
 
-Sport and Food are reserved for later material and are not shown as empty rounds.
+There is no background music. Short transition effects can be muted, stop during videos, and play only on the audience screen when it is connected. Local videos have remote pause/play/replay/close controls; YouTube uses its player controls. The presentation scales to the available height. Christmas keeps snow, lights and garlands; the other rounds feature animated globe, books, pages and film reels, with reduced-motion support. Official HKU branding appears in the header.
+
+For local use, keep `index.html` and `media/` together. Photographs, styles, scripts and fonts are embedded. The three cropped film clips work offline; YouTube and the official Antena 3 campanadas require Internet and load only after Play. The campanadas stop at 70 seconds and include a direct source link.
+
+The organisers supplied 30 Word-document images and the original film clips. Additional portraits, book covers, answer-only cinema posters and the official university logo include source credits. Credits and research references are available after revealing answers. Third-party assets retain their respective rights.
