@@ -2,6 +2,8 @@
 
 [Open the presentation](https://balpomorelitm.github.io/navidad-quiz/)
 
+[Download the printable team answer booklet](https://balpomorelitm.github.io/navidad-quiz/answer-sheet.pdf) - four colour A4 pages, or two sheets printed double-sided along the long edge. One booklet per team, with all 83 questions in presentation order, group/member names, single/multiple choices and written-answer fields.
+
 A classroom presentation with 83 questions: Geography & History (10), Art & Architecture (10), Literature (10), Cinema & TV (10), Sport (10), Music (13), Food & Drink (9), Christmas (11). The final three questions/options in every round are in Spanish except Food & Drink, which explicitly keeps all supplied PDF captures in their original English. All 25 Spanish solutions have italic English answer and explanation translations, shown only in the correction round.
 
 Start with the Mingle Challenge (10 of 15 tasks, a different person each time, turron prize draw). Quiz questions come first, followed by sectioned answers, the winning-team announcement, an English guide to Spain's New Year chimes, the local official 2025-2026 Antena 3 excerpt, a prize draw, Christmas greetings and a final Instagram QR slide. There are 202 slides, including three five-minute breaks after Art, Cinema and Music. The question blocks contain 20, 20, 23 and 20 questions. Breaks occur only during the question phase.
